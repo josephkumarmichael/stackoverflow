@@ -1,7 +1,7 @@
 The below code snippet will create Service in CentOS 7 using Ansible
 
 ## Code
-
+### Tasks
 /tasks/main.yml
 ```
 - name: TeamCity | Create environment file
@@ -14,7 +14,7 @@ The below code snippet will create Service in CentOS 7 using Ansible
   service: name=teamcity.service state=started enabled=yes
 ```
 
-
+### Templates
 /templates/teamcity.service.j2
 ```
 [Unit]
@@ -37,7 +37,7 @@ WantedBy=multi-user.target
 ```
 TEAMCITY_DATA_PATH="{{ teamcity.data_path }}"
 ```
-
+### Handlers
 \handlers\main.yml
 ```
 - name: reload systemctl
