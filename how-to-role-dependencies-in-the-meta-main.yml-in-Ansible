@@ -1,0 +1,19 @@
+if you are using private repo for galaxy then
+
+meta\main.yml
+```
+---
+# local copy
+#dependencies:
+#   - { role: '/roles/java', java_packages: java-1.8.0-openjdk }
+#http
+#dependencies:
+#   - { role: 'git+http://gitlabserver/ansible-galaxy/java.git,master'}
+#ssh
+dependencies:
+   - name: java
+     src: ssh://git@gitlabserver/ansible-galaxy/java.git
+     scm: git
+     version: master
+```
+Note: you may need to have private key in the host for git clone
