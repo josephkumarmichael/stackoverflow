@@ -1,4 +1,4 @@
-if you are using private repo for galaxy then
+how to define role dependencies in meta\main.yml for Ansible galaxy private repository
 
 meta\main.yml
 ```
